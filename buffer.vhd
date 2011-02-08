@@ -8,9 +8,9 @@ use IEEE.std_logic_1164.all;
 -- use IEE.std_logic_unsigned."="
 
 entity buff is
-  port (IN_A: in std_logic (15 downto 0);
+  port (IN_A: in std_logic_vector (15 downto 0);
         EN: in std_logic;
-        OUT_A : out std_logic (15 downto 0)
+        OUT_A : out std_logic_vector (15 downto 0)
   );
 end;
 
@@ -19,7 +19,7 @@ architecture struct of buff is
 begin
   
 get_output : process(IN_A, EN)
-  v_out : std_logic (15 downto 0);
+  variable v_out : std_logic_vector (15 downto 0);
   
   begin
   

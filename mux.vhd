@@ -8,9 +8,9 @@ use IEEE.std_logic_1164.all;
 -- use IEE.std_logic_unsigned."="
 
 entity mux is
-  port (IN_A, IN_B: in std_logic (15 downto 0),
-        SEL_B: in std_logic,
-        OUTPUT : out std_logic (15 downto 0)
+  port (IN_A, IN_B: in std_logic_vector (15 downto 0);
+        SEL_B: in std_logic;
+        OUTPUT : out std_logic_vector (15 downto 0)
   );
 end;
 
@@ -19,7 +19,7 @@ architecture struct of mux is
 begin
   
 get_output : process(in_a, in_b, sel_b)
-  v_out : std_logic (15 downto 0);
+  variable v_out : std_logic_vector (15 downto 0);
   
   begin
   
