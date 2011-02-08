@@ -6,10 +6,11 @@
 library IEEE;
 use IEEE.std_logic_1164.all;
 -- use IEE.std_logic_unsigned."="
+
 entity buff is
-  port (in_a: in std_logic (15 downto 0),
-        en: in std_logic,
-        out_a : out std_logic (15 downto 0)
+  port (IN_A: in std_logic (15 downto 0);
+        EN: in std_logic;
+        OUT_A : out std_logic (15 downto 0)
   );
 end;
 
@@ -17,7 +18,7 @@ architecture struct of buff is
   
 begin
   
-get_output : process(in_a, en)
+get_output : process(IN_A, EN)
   v_out : std_logic (15 downto 0);
   
   begin
@@ -28,7 +29,7 @@ get_output : process(in_a, en)
     v_out := "ZZZZZZZZZZZZZZZZ"; -- there must be a better way!
   end if;
   
-  output <= v_out;
+  OUT_A <= v_out;
   
 end process;
   

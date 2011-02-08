@@ -8,9 +8,9 @@ use IEEE.std_logic_1164.all;
 -- use IEE.std_logic_unsigned."="
 
 entity mux is
-  port (in_a, in_b: in std_logic (15 downto 0),
-        sel_b: in std_logic,
-        output : out std_logic (15 downto 0)
+  port (IN_A, IN_B: in std_logic (15 downto 0),
+        SEL_B: in std_logic,
+        OUTPUT : out std_logic (15 downto 0)
   );
 end;
 
@@ -29,7 +29,7 @@ get_output : process(in_a, in_b, sel_b)
     v_out := in_b;
   end if;
   
-  output <= v_out;
+  OUTPUT <= v_out;
   
 end process;
   

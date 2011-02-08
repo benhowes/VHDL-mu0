@@ -14,7 +14,7 @@ entity mux is
   );
 end;
 
-architecture behavioral of mux is
+architecture struct of mux is
   
 begin
   
@@ -33,4 +33,4 @@ get_output : process(in_a, in_b, sel_b)
   
 end process;
   
-end behavioral;
+end struct;
