@@ -20,20 +20,20 @@ architecture struct of ALU is
 begin
   
 get_output : process(IN_A, IN_B, B_INV, C_IN, A_EN, RST)
-  variable v_out : std_logic_vector (15 downto 0);
+  variable v_out, v_b : std_logic_vector (15 downto 0);
   
   begin
     
   if(B_INV = '1') then --invert B
-    v_out := (- IN_B );
+    v_b := (- signed(IN_B) );
   else
-    v_out := IN_B;
+    v_b := IN_B;
   end if;
   
   if(A_EN = '0') then -- disable A
-    v_out := IN_B;
+    null;
   else
-    v_out := IN_A + IN_B;
+    v_out := signed(IN_A) + signed(v_b);
   end if;
   
   if(C_IN = '1') then -- we have a carry in
