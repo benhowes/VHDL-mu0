@@ -3,3 +3,376 @@ K3
 13
 cModel Technology
 dC:\Modeltech_pe_edu_10.0\examples
+Eaccumulator
+Z0 w1297267952
+Z1 DPx4 ieee 15 std_logic_arith 0 22 4`Y?g_lkdn;7UL9IiJck01
+Z2 DPx4 ieee 18 std_logic_unsigned 0 22 RYmj;=TK`k=k>D@Cz`zoB3
+Z3 DPx3 std 6 textio 0 22 G^o2zK;Vh4eVdKTVo98653
+Z4 DPx4 ieee 14 std_logic_1164 0 22 5=aWaoGZSMWIcH0i^f`XF1
+Z5 dZ:\home\ben\Dropbox\uni\Computer Arcitecture\mu0
+Z6 8Z:/home/ben/Dropbox/uni/Computer Arcitecture/mu0/accumulator.vhd
+Z7 FZ:/home/ben/Dropbox/uni/Computer Arcitecture/mu0/accumulator.vhd
+l0
+L10
+VjN[ZYMaNQMAC@a`^2FeQb1
+Z8 OP;C;10.0;49
+32
+Z9 !s108 1297275310.757000
+Z10 !s90 -reportprogress|300|-work|work|-2002|-explicit|Z:/home/ben/Dropbox/uni/Computer Arcitecture/mu0/accumulator.vhd|
+Z11 !s107 Z:/home/ben/Dropbox/uni/Computer Arcitecture/mu0/accumulator.vhd|
+Z12 o-work work -2002 -explicit -O0
+Z13 tExplicit 1
+!s100 Q_g5F0Jg_R:91Z:b:OzOE3
+Astruct
+R1
+R2
+R3
+R4
+DEx4 work 11 accumulator 0 22 jN[ZYMaNQMAC@a`^2FeQb1
+l21
+L19
+V1FF9O4E9[:mDaXbVQeFh43
+R8
+32
+R9
+R10
+R11
+R12
+R13
+!s100 <95N;9DLQ2@J9Fokd3okB2
+Ealu
+Z14 w1297267769
+Z15 DPx4 ieee 16 std_logic_signed 0 22 E>OLoMaBGQ?hbGgOoNXM^1
+R1
+R3
+R4
+R5
+Z16 8Z:/home/ben/Dropbox/uni/Computer Arcitecture/mu0/adder.vhd
+Z17 FZ:/home/ben/Dropbox/uni/Computer Arcitecture/mu0/adder.vhd
+l0
+L11
+VIIW787z=8i1LV<@HRd^fL3
+R8
+32
+Z18 !s108 1297275311.098000
+Z19 !s90 -reportprogress|300|-work|work|-2002|-explicit|Z:/home/ben/Dropbox/uni/Computer Arcitecture/mu0/adder.vhd|
+Z20 !s107 Z:/home/ben/Dropbox/uni/Computer Arcitecture/mu0/adder.vhd|
+R12
+R13
+!s100 RR^^[`8k36a2TW`P:4M:e2
+Astruct
+R15
+R1
+R3
+R4
+DEx4 work 3 alu 0 22 IIW787z=8i1LV<@HRd^fL3
+l20
+L18
+V<4Q]nUezKR05]]0l>EOT:1
+R8
+32
+R18
+R19
+R20
+R12
+R13
+!s100 2Uk15RM`FEe__fE>h`UP61
+Ebuff
+Z21 w1297193517
+R3
+R4
+R5
+Z22 8Z:/home/ben/Dropbox/uni/Computer Arcitecture/mu0/buffer.vhd
+Z23 FZ:/home/ben/Dropbox/uni/Computer Arcitecture/mu0/buffer.vhd
+l0
+L10
+VGV[USWXdT1PC?oh_dz2`K0
+R8
+32
+Z24 !s108 1297275311.855000
+Z25 !s90 -reportprogress|300|-work|work|-2002|-explicit|Z:/home/ben/Dropbox/uni/Computer Arcitecture/mu0/buffer.vhd|
+Z26 !s107 Z:/home/ben/Dropbox/uni/Computer Arcitecture/mu0/buffer.vhd|
+R12
+R13
+!s100 CbMSEUDPOz`K2j0_l2ZUJ2
+Astruct
+R3
+R4
+DEx4 work 4 buff 0 22 GV[USWXdT1PC?oh_dz2`K0
+l19
+L17
+V::4GV`8R8a=mb;7ldBeGK0
+R8
+32
+R24
+R25
+R26
+R12
+R13
+!s100 R8A=:=;zio>bkMBN8aj1e1
+Ecomp
+Z27 w1297270956
+R3
+R4
+R5
+Z28 8Z:/home/ben/Dropbox/uni/Computer Arcitecture/mu0/computer.vhd
+Z29 FZ:/home/ben/Dropbox/uni/Computer Arcitecture/mu0/computer.vhd
+l0
+L9
+VaTMTlNzXk=F5LXL@Q6K8I0
+R8
+32
+Z30 !s108 1297275313.307000
+Z31 !s90 -reportprogress|300|-work|work|-2002|-explicit|Z:/home/ben/Dropbox/uni/Computer Arcitecture/mu0/computer.vhd|
+Z32 !s107 Z:/home/ben/Dropbox/uni/Computer Arcitecture/mu0/computer.vhd|
+R12
+R13
+!s100 >FJ39eeZEnVC]Wc40RjiG3
+Acomp_arch
+R3
+R4
+DEx4 work 4 comp 0 22 aTMTlNzXk=F5LXL@Q6K8I0
+l44
+L18
+V5Y<9d]F`mz3G9KgNiZAiN3
+!s100 lo^Kgan^P>Y5N?[Q=PcNn3
+R8
+32
+R30
+R31
+R32
+R12
+R13
+Econtrol
+Z33 w1297268063
+R3
+R4
+R5
+Z34 8Z:/home/ben/Dropbox/uni/Computer Arcitecture/mu0/control.vhd
+Z35 FZ:/home/ben/Dropbox/uni/Computer Arcitecture/mu0/control.vhd
+l0
+L9
+V?JF[jzi]INW@_enKnGLHF1
+R8
+32
+Z36 !s108 1297275312.230000
+Z37 !s90 -reportprogress|300|-work|work|-2002|-explicit|Z:/home/ben/Dropbox/uni/Computer Arcitecture/mu0/control.vhd|
+Z38 !s107 Z:/home/ben/Dropbox/uni/Computer Arcitecture/mu0/control.vhd|
+R12
+R13
+!s100 iKGl<C=b85]EcnL6Lb:3@3
+Astruct
+R3
+R4
+DEx4 work 7 control 0 22 ?JF[jzi]INW@_enKnGLHF1
+l20
+L18
+V5WX[R^<RB>?_c:kWknC8V1
+R8
+32
+R36
+R37
+R38
+R12
+R13
+!s100 RUN;8HokRV0ET1@XLhnU01
+Einstruction_pointer
+Z39 w1297268135
+R3
+R4
+R5
+Z40 8Z:/home/ben/Dropbox/uni/Computer Arcitecture/mu0/instruction_pointer.vhd
+Z41 FZ:/home/ben/Dropbox/uni/Computer Arcitecture/mu0/instruction_pointer.vhd
+l0
+L10
+VX4hOb`cSoKmYFg@T[zaAN3
+R8
+32
+Z42 !s108 1297275310.384000
+Z43 !s90 -reportprogress|300|-work|work|-2002|-explicit|Z:/home/ben/Dropbox/uni/Computer Arcitecture/mu0/instruction_pointer.vhd|
+Z44 !s107 Z:/home/ben/Dropbox/uni/Computer Arcitecture/mu0/instruction_pointer.vhd|
+R12
+R13
+!s100 TAd]JSMgkePDd>FIiiUki1
+Astruct
+R3
+R4
+DEx4 work 19 instruction_pointer 0 22 X4hOb`cSoKmYFg@T[zaAN3
+l20
+L18
+V_kKleZ:f0[0e]ACAHC:a@1
+R8
+32
+R42
+R43
+R44
+R12
+R13
+!s100 ;O8b6>K3n<BJHR8KK94j@2
+Einstruction_register
+Z45 w1297268160
+R3
+R4
+R5
+Z46 8Z:/home/ben/Dropbox/uni/Computer Arcitecture/mu0/instruction_register.vhd
+Z47 FZ:/home/ben/Dropbox/uni/Computer Arcitecture/mu0/instruction_register.vhd
+l0
+L10
+VOUn14_BcCfGHM^9bOJ8>;3
+R8
+32
+Z48 !s108 1297275312.583000
+Z49 !s90 -reportprogress|300|-work|work|-2002|-explicit|Z:/home/ben/Dropbox/uni/Computer Arcitecture/mu0/instruction_register.vhd|
+Z50 !s107 Z:/home/ben/Dropbox/uni/Computer Arcitecture/mu0/instruction_register.vhd|
+R12
+R13
+!s100 J_g<M_iXdOcY@mCEP?39F2
+Astruct
+R3
+R4
+DEx4 work 20 instruction_register 0 22 OUn14_BcCfGHM^9bOJ8>;3
+l20
+L18
+V8>=k0HUzMU5UjM^CGmB[W1
+R8
+32
+R48
+R49
+R50
+R12
+R13
+!s100 lR3Cmo@;C@PS:0P04h`@a1
+Emu0
+Z51 w1297270706
+R3
+R4
+R5
+Z52 8Z:/home/ben/Dropbox/uni/Computer Arcitecture/mu0/mu0.vhd
+Z53 FZ:/home/ben/Dropbox/uni/Computer Arcitecture/mu0/mu0.vhd
+l0
+L9
+V]Mgz?`6]S:z?klH3k5gkK1
+R8
+32
+Z54 !s108 1297275312.926000
+Z55 !s90 -reportprogress|300|-work|work|-2002|-explicit|Z:/home/ben/Dropbox/uni/Computer Arcitecture/mu0/mu0.vhd|
+Z56 !s107 Z:/home/ben/Dropbox/uni/Computer Arcitecture/mu0/mu0.vhd|
+R12
+R13
+!s100 ]>VDn^`IL3_kXF0SO07fn3
+Amu0_arch
+R3
+R4
+DEx4 work 3 mu0 0 22 ]Mgz?`6]S:z?klH3k5gkK1
+l117
+L20
+VlHHdX4QUNng:5k`C<cM8L2
+R8
+32
+R54
+R55
+R56
+R12
+R13
+!s100 8?A=hml0BV]1Ndn?LgjXV0
+Emux
+Z57 w1297261193
+R3
+R4
+R5
+Z58 8Z:/home/ben/Dropbox/uni/Computer Arcitecture/mu0/mux.vhd
+Z59 FZ:/home/ben/Dropbox/uni/Computer Arcitecture/mu0/mux.vhd
+l0
+L10
+VQ8dnB@SAgRTJ_MKcSDlXV3
+R8
+32
+Z60 !s108 1297275311.458000
+Z61 !s90 -reportprogress|300|-work|work|-2002|-explicit|Z:/home/ben/Dropbox/uni/Computer Arcitecture/mu0/mux.vhd|
+Z62 !s107 Z:/home/ben/Dropbox/uni/Computer Arcitecture/mu0/mux.vhd|
+R12
+R13
+!s100 heD_mVn02[^l]]FCCUS0l1
+Astruct
+R3
+R4
+DEx4 work 3 mux 0 22 Q8dnB@SAgRTJ_MKcSDlXV3
+l19
+L17
+VkiZA=dCf4DKLH9=Zg[YSC1
+R8
+32
+R60
+R61
+R62
+R12
+R13
+!s100 nNe594dNOcGaBlOZ6gfhd1
+Esync_ram
+Z63 w1297271018
+Z64 DPx4 ieee 11 numeric_std 0 22 k7B<7GmYYYmX;0X]XHFD10
+R3
+R4
+R5
+Z65 8Z:/home/ben/Dropbox/uni/Computer Arcitecture/mu0/Primary Memory.vhd
+Z66 FZ:/home/ben/Dropbox/uni/Computer Arcitecture/mu0/Primary Memory.vhd
+l0
+L16
+V5H^gI]1eTU;haWb?o?CjE3
+R8
+32
+Z67 !s108 1297275310.062000
+Z68 !s90 -reportprogress|300|-work|work|-2002|-explicit|Z:/home/ben/Dropbox/uni/Computer Arcitecture/mu0/Primary Memory.vhd|
+Z69 !s107 Z:/home/ben/Dropbox/uni/Computer Arcitecture/mu0/Primary Memory.vhd|
+R12
+R13
+!s100 JGflhACYhJDA<YRiE>9AW1
+Artl
+R64
+R3
+R4
+DEx4 work 8 sync_ram 0 22 5H^gI]1eTU;haWb?o?CjE3
+l32
+L26
+VaUVP`P]lQoiIOihM1_<WM3
+R8
+32
+R67
+R68
+R69
+R12
+R13
+!s100 0lWhoOiO^kZfaeD2KDN?D3
+Etb_comp
+Z70 w1297271245
+R3
+R4
+R5
+Z71 8Z:/home/ben/Dropbox/uni/Computer Arcitecture/mu0/tb_computer.vhd
+Z72 FZ:/home/ben/Dropbox/uni/Computer Arcitecture/mu0/tb_computer.vhd
+l0
+L9
+VQ1Z^VS];?@LzjkcfkSJa91
+!s100 b0zNn@367Ae0`?iZoS7N00
+R8
+32
+Z73 !s108 1297275313.645000
+Z74 !s90 -reportprogress|300|-work|work|-2002|-explicit|Z:/home/ben/Dropbox/uni/Computer Arcitecture/mu0/tb_computer.vhd|
+Z75 !s107 Z:/home/ben/Dropbox/uni/Computer Arcitecture/mu0/tb_computer.vhd|
+R12
+R13
+Atb_comp_arch
+R3
+R4
+Z76 DEx4 work 7 tb_comp 0 22 Q1Z^VS];?@LzjkcfkSJa91
+l28
+L11
+Z77 Vd22:ncJk5852F]7B?LAEK2
+Z78 !s100 ?c>l^G8dEA^Zz:A1^GP]02
+R8
+32
+R73
+R74
+R75
+R12
+R13

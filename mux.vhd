@@ -18,7 +18,7 @@ architecture struct of mux is
   
 begin
   
-get_output : process(in_a, in_b, sel_b)
+get_output : process(IN_A, IN_B, SEL_B)
   variable v_out : std_logic_vector (15 downto 0);
   
   begin

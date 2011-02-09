@@ -5,7 +5,7 @@
 -------------------------------------------
 library IEEE;
 use IEEE.std_logic_1164.all;
-use IEEE.std_logic_unsigned."="
+use IEEE.std_logic_unsigned."=";
 
 entity accumulator is
   port ( CLK, EN : in std_logic;
@@ -24,7 +24,7 @@ begin
   variable v_out : std_logic_vector (15 downto 0);
   variable v_z, v_neg : std_logic;
   begin
-    if(EN AND rising_edge(CLK)) then
+    if(EN = '1' AND rising_edge(CLK)) then
       v_out := INPUT;
     
       if(v_out = 0) then -- we have 0 in the acc

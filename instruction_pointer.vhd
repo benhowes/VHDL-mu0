@@ -22,7 +22,7 @@ begin
   control : process(INPUT, EN, CLK)
   variable v_out : std_logic_vector (15 downto 0);
   begin
-    if(EN AND rising_edge(CLK)) then
+    if(EN = '1' AND rising_edge(CLK)) then
       v_out := INPUT;
       OUTPUT <= v_out;
     end if;
