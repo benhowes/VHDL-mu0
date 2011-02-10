@@ -27,7 +27,6 @@ architecture RTL of sync_ram is
 
    type ram_type is array (0 to 1048) of std_logic_vector(data_in'range);
    signal ram : ram_type;
-
 begin
 
   RamProc: process(clock, address, RNW, MEMRQ) is
@@ -50,10 +49,12 @@ begin
     end if;
   end process RamProc;
   
-  dataout : process(MEMRQ, address, data_in) --change the output aysnc
+  dataout : process(MEMRQ, address, data_in, clock, RNW) --change the output aysnc
+   variable op : std_logic_vector (1 downto 0);
    begin
-   case MEMRQ is
-    when '1' => data_out <= ram(to_integer(unsigned(address)));
+   op := MEMRQ & RNW;
+   case op is
+    when "11" => data_out <= ram(to_integer(unsigned(address)));
     when others => data_out <= "ZZZZZZZZZZZZZZZZ";
    end case;
   end process dataout;
