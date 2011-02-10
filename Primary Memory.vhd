@@ -30,13 +30,13 @@ architecture RTL of sync_ram is
 
 begin
 
-  RamProc: process(clock) is
+  RamProc: process(clock, address, RNW, MEMRQ) is
 
   begin
       --put some instructions in the RAM here!
-  ram(0) <= "0000000100000000"; -- LDA 512
-  ram(1) <= "0010000100000001"; -- ADD 513
-  ram(2) <= "0001000100000010"; -- STO 514
+  ram(0) <= "0000000100000000"; -- LDA 256
+  ram(1) <= "0010000100000001"; -- ADD 257
+  ram(2) <= "0001000100000010"; -- STO 258
   ram(3) <= "0111000000000000"; -- STOP
   
   --data space
@@ -45,13 +45,17 @@ begin
     if rising_edge(clock) then
       if (MEMRQ = '1' AND RNW = '0') then -- write
         ram(to_integer(unsigned(address))) <= data_in;
-      elsif (MEMRQ = '1' AND RNW = '1') then --read
-        data_out <= ram(to_integer(unsigned(address)));
-      else
-        null;
       end if;
       
     end if;
   end process RamProc;
-
+  
+  dataout : process(MEMRQ, address, data_in) --change the output aysnc
+   begin
+   case MEMRQ is
+    when '1' => data_out <= ram(to_integer(unsigned(address)));
+    when others => data_out <= "ZZZZZZZZZZZZZZZZ";
+   end case;
+  end process dataout;
+  
 end architecture RTL;

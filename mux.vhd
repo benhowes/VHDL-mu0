@@ -23,13 +23,10 @@ get_output : process(IN_A, IN_B, SEL_B)
   
   begin
   
-  if(sel_b = '0') then
-    v_out := in_a;
-  else
-    v_out := in_b;
-  end if;
-  
-  OUTPUT <= v_out;
+  case SEL_B is
+    when '0' => OUTPUT <= in_a;
+    when others => OUTPUT <= in_b;
+  end case;
   
 end process;
   

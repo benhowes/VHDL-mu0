@@ -5,8 +5,7 @@
 -------------------------------------------
 library IEEE;
 use IEEE.std_logic_1164.all;
-use IEEE.std_logic_arith.all;
-use IEEE.std_logic_signed.all;
+use IEEE.numeric_std.all;
 
 entity ALU is
   port (IN_A, IN_B: in std_logic_vector (15 downto 0);
@@ -16,36 +15,31 @@ entity ALU is
 end;
 
 architecture struct of ALU is
+  signal op : std_logic_vector (3 downto 0);
   
 begin
   
 get_output : process(IN_A, IN_B, B_INV, C_IN, A_EN, RST)
-  variable v_out, v_b : std_logic_vector (15 downto 0);
   
+  constant cin_ext : std_logic_vector(15 downto 1) := (others => '0'); 
   begin
-    
-  if(B_INV = '1') then --invert B
-    v_b := (- signed(IN_B) );
-  else
-    v_b := IN_B;
-  end if;
+  op <= RST & A_EN & B_INV & C_IN;
   
-  if(A_EN = '0') then -- disable A
-    null;
-  else
-    v_out := signed(IN_A) + signed(v_b);
-  end if;
-  
-  if(C_IN = '1') then -- we have a carry in
-    v_out := signed(v_out) + '1' ;
-  end if;
-  
-  if(RST = '1') then
-    v_out := "0000000000000000";
-  end if;
-  
-  OUTPUT <= v_out;
-  
+  case op is
+    when "1XXX" => OUTPUT <= "0000000000000000";
+    when "0100" | "0101" => -- A+B+C
+      OUTPUT <= std_logic_vector((unsigned(IN_A) + unsigned(IN_B) + unsigned(cin_ext & C_IN)));
+    when "0110" | "0111" => 
+      OUTPUT <= std_logic_vector((unsigned(IN_A) - unsigned(IN_B) + unsigned(cin_ext & C_IN)));
+    when "0000" | "0001" =>
+      OUTPUT <= std_logic_vector((unsigned(IN_B) + unsigned(cin_ext & C_IN)));
+    when "0010" | "0011" =>
+      OUTPUT <= std_logic_vector((0 - unsigned(IN_B) + unsigned(cin_ext & C_IN)));
+    when others => --undefined functions.
+      OUTPUT <= "0000000000000000";
+  end case;
+
 end process;
+
   
 end struct;

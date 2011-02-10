@@ -19,17 +19,14 @@ architecture struct of buff is
 begin
   
 get_output : process(IN_A, EN)
-  v_out : std_logic_vector (15 downto 0);
   
   begin
   
-  if(en = '1') then
-    v_out := in_a;
-  else
-    v_out := "ZZZZZZZZZZZZZZZZ"; -- there must be a better way!
-  end if;
-  
-  OUT_A <= v_out;
+  case en is
+    when '0' => OUT_A <= in_a;
+    when others => OUT_A <= "ZZZZZZZZZZZZZZZZ";
+  end case;
+
   
 end process;
   
