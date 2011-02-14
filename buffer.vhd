@@ -24,7 +24,7 @@ get_output : process(IN_A, EN)
   
   case en is
     when '1' => OUT_A <= in_a;
-    when others => OUT_A <= "ZZZZZZZZZZZZZZZZ";
+    when others => OUT_A <= (others => 'Z');
   end case;
 
   

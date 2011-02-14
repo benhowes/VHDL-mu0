@@ -26,21 +26,30 @@ end entity sync_ram;
 architecture RTL of sync_ram is
 
    type ram_type is array (0 to 1048) of std_logic_vector(data_in'range);
-   signal ram : ram_type;
+   signal ram : ram_type := 
+   (
+    -- INSTRUCTIONS
+    -- Start with 0 in A and add &257, &259 times, saving the result in 258
+    0 => x"0100", -- LDA 256
+    1 => x"2101", -- ADD 257
+    2 => x"1102", -- STO 258
+    3 => x"0103", -- LDA 259
+    4 => x"3104", -- SUB 260
+    5 => x"1103", -- STO 259
+    6 => x"4000", -- JNE 0
+    7 => x"7000", -- STOP
+    -- DATA
+    256 => x"0000", -- 2
+    257 => x"0004", -- 4
+    259 => x"0010", -- 8 (number of times to loop)
+    260 => x"0001", -- 1 (decrement value)
+    others => x"0000"
+   );
 begin
 
   RamProc: process(clock, address, RNW, MEMRQ) is
 
   begin
-      --put some instructions in the RAM here!
-  ram(0) <= "0000000100000000"; -- LDA 256
-  ram(1) <= "0010000100000001"; -- ADD 257
-  ram(2) <= "0001000100000010"; -- STO 258
-  ram(3) <= "0100000000000000"; -- JMP 0
-  
-  --data space
-  ram(256) <= "0000000000000010"; -- 2
-  ram(257) <= "0000000000000100"; -- 4
     if rising_edge(clock) then
       if (MEMRQ = '1' AND RNW = '0') then -- write
         ram(to_integer(unsigned(address))) <= data_in;

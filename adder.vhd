@@ -21,22 +21,22 @@ begin
   
 get_output : process(IN_A, IN_B, B_INV, C_IN, A_EN, RST)
   
-  constant cin_ext : std_logic_vector(15 downto 1) := (others => '0'); 
+  constant cin_ext : std_logic_vector(15 downto 1) := (others => '0');
+  constant invert : std_logic_vector(15 downto 0) := (others => '1'); 
   begin
   op <= RST & A_EN & B_INV & C_IN;
   
   case op is
-    when "1XXX" => OUTPUT <= "0000000000000000";
     when "0100" | "0101" => -- A+B+C
       OUTPUT <= std_logic_vector((unsigned(IN_A) + unsigned(IN_B) + unsigned(cin_ext & C_IN)));
     when "0110" | "0111" => 
-      OUTPUT <= std_logic_vector((unsigned(IN_A) - unsigned(IN_B) + unsigned(cin_ext & C_IN)));
+      OUTPUT <= std_logic_vector((unsigned(IN_A) + unsigned(IN_B XOR invert) + unsigned(cin_ext & C_IN)));
     when "0000" | "0001" =>
       OUTPUT <= std_logic_vector((unsigned(IN_B) + unsigned(cin_ext & C_IN)));
     when "0010" | "0011" =>
       OUTPUT <= std_logic_vector((0 - unsigned(IN_B) + unsigned(cin_ext & C_IN)));
-    when others => --undefined functions.
-      OUTPUT <= "0000000000000000";
+    when others => --undefined functions or reset. Dual benefit of rebooting on bad command
+      OUTPUT <= (others => '0');
   end case;
 
 end process;
