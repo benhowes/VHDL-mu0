@@ -32,11 +32,11 @@ architecture RTL of sync_ram is
     -- Start with 0 in A and add &257, &259 times, saving the result in 258
     0 => x"0100", -- LDA 256
     1 => x"2101", -- ADD 257
-    2 => x"1102", -- STO 258
+    2 => x"1102", -- STO 256
     3 => x"0103", -- LDA 259
     4 => x"3104", -- SUB 260
     5 => x"1103", -- STO 259
-    6 => x"4000", -- JNE 0
+    6 => x"6000", -- JNE 0
     7 => x"7000", -- STOP
     -- DATA
     256 => x"0000", -- 2
