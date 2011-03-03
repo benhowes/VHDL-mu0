@@ -1,6 +1,4 @@
-Ben Howes
 
-===
 Implementation of the mu0 processor and some memory in VHDL for EENG34040
 ===
 This is intended largely for undergrads on eeng34040 at the University of Bristol, but help yourself all the same. More info can be found on the manchester universtity website.
@@ -17,14 +15,9 @@ I will give push access to anyone who wishes to share their code with the rest o
 
 Programming the processor
 ---
-In order to program, simply use the command listings handed out in the lecture and start your commands from location 0. I have been a bit eager to get this info up, but I know that ADD, LDA, STO and JMP are fully functional. For faster debugging I limited the memory to 1K (x16).
-This is intended for use in model sim!
+In order to program, simply use the command listings handed out in the lecture and start your commands from location 0. For faster debugging I limited the memory to 1K (x16).
+This is intended for use in model sim, though should work in any simulation package.
 
-What you can do with it
----
-1. Make or port existing programs to the processor.
-2. Time them.
-3. Make buffers and caches; new data paths; various other things to speed up the processor and re test!
-
+I am in the process of making a compiler/emulator which is in the compiler-dev branch and will be essentially be the lanuage which is used for the bristol coms22201 unit and will be based on antrl.
 
 
